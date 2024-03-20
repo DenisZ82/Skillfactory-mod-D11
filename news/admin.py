@@ -10,7 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     # list_display = list_display[2:7]
     list_display = ('author', 'category_post', 'time_in', 'title', 'rating', 'subject_post')
     list_filter = ('author', 'category_post', 'rating', 'category_post_many__name')
-    search_fields = ('author', 'category_post', 'title', 'category_post_many__name')
+    search_fields = ('category_post', 'title', 'category_post_many__name',)  # 'author',
 
 
 admin.site.register(Category)
